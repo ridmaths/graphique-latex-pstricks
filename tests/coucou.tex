@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathrsfs}
+\usepackage{pstricks-add}
+\pagestyle{empty}
+\begin{document}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25} 
+\begin{pspicture*}(-10.0,-10.0)(10.0,10.0) 
+\multips(-10.0,0)(1.0,0){21}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=1pt,linecolor=lightgray]{c-c}(0,-10.0)(0,10.0)}
+\multips(0,-10.0)(0,1.0){21}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=1pt,linecolor=lightgray]{c-c}(-10.0,0)(10.0,0)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=1]{->}(0,0)(-10.0,-10.0)(10.0,10.0)
+\psplot[linewidth=1.2pt,linecolor=red,plotpoints=200]{-10.0}{10.0}{2*x+1}
+\rput[bl](-9.2,-17.4000000000000){\red{$\mathscr{C}_f$}}
+\psplot[linewidth=1.2pt,linecolor=blue,plotpoints=200]{-5.0}{5.0}{x^2+1}
+\rput[bl](4.06,17.4836000000000){\blue{$\mathscr{C}_g$}}
+\end{pspicture*}  
+\end{document}
